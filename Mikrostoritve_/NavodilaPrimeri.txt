@@ -1,0 +1,17 @@
+mongodb+srv://ita2024:ita2024@cluster0.6jgy1cg.mongodb.net/FitnessApp?retryWrites=true&w=majority
+
+http://localhost:8080/insertCustomer
+Content-Type: application/json
+{
+    "nameAndSurname": "John Doe",
+    "dateOfBirth": "1990-01-01",
+    "gender": "Male",
+    "email": "john@example.com",
+    "telephone": "1234567890",
+    "address": "123 Main St, City, Country",
+    "typeOfSubscription": "Premium",
+    "dateOfSubscription": "2024-05-03",
+    "paymentMethod": "Credit Card",
+    "validTill": "2025-05-03",
+    "status": "Active"
+}
