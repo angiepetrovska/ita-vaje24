@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option java_package = "com.mikrostoritev2user.quarkus.grpc";
+
+service  CustomerService{
+  rpc GetCustomer(CustomerGetRequest) returns (CustomerListResponse){}
+  rpc InsertCustomer(Customer) returns (Customer) {}
+  rpc UpdateCustomer(Customer) returns (Customer) {}
+  rpc DeleteCustomer(CustomerDeleteRequest) returns (Customer){}
+}
+
+message CustomerGetRequest{
+  string nameAndSurname = 1;
+}
+
+message CustomerDeleteRequest{
+  string customerId = 1;
+}
+
+message Customer{
+  string nameAndSurname = 1;
+  string dateOfBirth = 2;
+  string gender = 3;
+  string email = 4;
+  string telephone = 5;
+  string address = 6;
+  string note = 7;
+  string dateInserted = 8;
+  string dateUpdated = 9;
+  string customerId = 10;
+}
+
+message CustomerListResponse {
+  repeated Customer customers = 1;
+}
+
+
